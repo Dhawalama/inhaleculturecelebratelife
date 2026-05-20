@@ -1,0 +1,29 @@
+<footer class="footer" aria-label="Site footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="word">ICCL <em>·</em></div>
+      <p>{{ footer_blurb | default("Inhale Culture Celebrate Life Ltd is a registered Australian charity and public company limited by guarantee, advancing culture through multicultural arts, food and community programming.") | safe }}</p>
+    </div>
+    <div>
+      <h4>Navigate</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="festival.html">MOMO Fest 2026</a></li>
+        <li><a href="about.html">About ICCL</a></li>
+        <li><a href="about.html#governance">Governance</a></li>
+        <li><a href="about.html#contact">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Follow</h4>
+      <ul>
+        <li><a href="https://www.facebook.com/iccl.org.au" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+        <li><a href="https://www.momofest.com.au" target="_blank" rel="noopener noreferrer">MOMO Fest site</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>{{ footer_legal | default("© 2026 Inhale Culture Celebrate Life Ltd · ABN 94 690 672 694 · ACN 690 672 694") }}</span>
+    <span>Registered charity · Thornbury VIC 3071</span>
+  </div>
+</footer>

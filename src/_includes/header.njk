@@ -1,0 +1,29 @@
+{% if topbar !== false %}
+<div class="topbar">
+  <div class="topbar-inner">
+    <div><span class="dot"></span>{{ topbar_left | default("Registered Australian charity · ACNC &amp; ASIC compliant") | safe }}</div>
+    <div class="right">{{ topbar_right | default('<a href="festival.html">MOMO Fest Melbourne 2026 · Recap →</a>') | safe }}</div>
+  </div>
+</div>
+{% endif %}
+
+<nav class="nav" aria-label="Main">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-brand" aria-label="ICCL home">
+      <img src="assets/ICCL-Logo.png" alt="" width="939" height="523" decoding="async">     
+    </a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="primary-nav" role="list">
+      <li><a href="index.html"{% if currentPage == "home" %} class="current"{% endif %}>Home</a></li>
+      <li><a href="festival.html"{% if currentPage == "festival" %} class="current"{% endif %}>Festival</a></li>
+      <li><a href="about.html"{% if currentPage == "about" %} class="current"{% endif %}>About</a></li>
+      {% if nav_pill == "momofest" %}
+      <li><a href="festival.html" class="pill">MOMO Fest 2026 <span class="ar">→</span></a></li>
+      {% else %}
+      <li><a href="https://www.facebook.com/iccl.org.au" target="_blank" rel="noopener noreferrer" class="pill">Follow for updates <span class="ar">→</span></a></li>
+      {% endif %}
+    </ul>
+  </div>
+</nav>

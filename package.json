@@ -7,7 +7,7 @@
     "clean": "node -e \"require('fs').rmSync('_site',{recursive:true,force:true})\"",
     "build:ts": "esbuild src/ts/nav.ts --bundle --target=es2020 --outfile=_site/nav.js --minify",
     "build:html": "eleventy",
-    "build:assets": "node -e \"const fs=require('fs');fs.mkdirSync('_site',{recursive:true});fs.copyFileSync('Constitution of Inhale Culture Celebrate Life Ltd (ICCL) - 2025.pdf','_site/Constitution of Inhale Culture Celebrate Life Ltd (ICCL) - 2025.pdf')\"",
+    "build:assets": "node -e \"const fs=require('fs');fs.mkdirSync('_site',{recursive:true});fs.copyFileSync('Constitution of Inhale Culture Celebrate Life Ltd (ICCL) - 2025.pdf','_site/Constitution of Inhale Culture Celebrate Life Ltd (ICCL) - 2025.pdf');fs.writeFileSync('_site/.nojekyll','')\"",
     "build": "npm run clean && npm run build:ts && npm run build:html && npm run build:assets",
     "dev:ts": "esbuild src/ts/nav.ts --bundle --target=es2020 --outfile=_site/nav.js --watch",
     "dev:html": "eleventy --serve",
